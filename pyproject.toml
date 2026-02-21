@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "atlas-graph"
+version = "0.1.0"
+description = "Graph Engine for PipelineAtlas — normalized CI/CD graph construction and persistence"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "atlas-sdk @ file:///${PROJECT_ROOT}/../atlas-sdk",
+    "psycopg[binary]>=3.1",
+    "redis>=5.0",
+    "networkx>=3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
