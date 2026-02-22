@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 dependencies = [
-    "atlas-sdk @ file:///${PROJECT_ROOT}/../atlas-sdk",
+    "atlas-sdk",
     "psycopg[binary]>=3.1",
     "redis>=5.0",
     "networkx>=3.0",
